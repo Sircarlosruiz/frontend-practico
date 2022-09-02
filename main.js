@@ -90,6 +90,8 @@ function toggleCarritoIcon() {
 
 function renderProductList(arr) {
   for(product of arr){
+
+    /*Creando lista de productos*/
     const productCard = document.createElement('div');
     productCard.classList.add('product-card');
 
@@ -110,8 +112,7 @@ function renderProductList(arr) {
 
     //agregando productos a la lista de productos
 
-    productInfoDiv.appendChild(productPrice);
-    productInfoDiv.appendChild(productName);
+    productInfoDiv.append(productPrice, productName);
 
     const productInfoFigure = document.createElement('figure');
     const productImgCart = document.createElement('img');
@@ -119,10 +120,8 @@ function renderProductList(arr) {
     productImgCart.setAttribute('src', '../icons/bt_add_to_cart.svg');
 
     productInfoFigure.appendChild(productImgCart);
-    productInfo.appendChild(productInfoDiv);
-    productInfo.appendChild(productInfoFigure);
-    productCard.appendChild(productImage);
-    productCard.appendChild(productInfo);
+    productInfo.append(productInfoDiv, productInfoFigure);
+    productCard.append(productImage, productInfo);
     cardsContainer.appendChild(productCard);
 }
 }
