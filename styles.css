@@ -238,7 +238,7 @@ nav {
 }
 
 /* MEDIA QUERYS */
-@media (max-width: 640px) {
+@media (max-width: 639px) {
   .menu {
     display: block;
   }
@@ -251,15 +251,16 @@ nav {
   .desktop-menu{
     display: none;
   }
+  .product-detail {
+    width: 100%;
+  }
 }
 
 @media (min-width: 640px) {
   .mobile-menu {
     display: none;
   }
-}
-@media (max-width: 640px) {
-  .product-detail {
-    width: 100%;
+  .menu-icon {
+    display: none;
   }
 }
